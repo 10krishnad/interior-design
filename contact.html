@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="form.css">
+    <title>Forms</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        nav {
+            font-size: 1.2rem;
+        }
+
+        ul {
+            list-style-type: none;
+            overflow: hidden;
+            background-color: #111111;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        li {
+            float: right;
+            color: whitesmoke;
+        }
+
+        #list a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            text-decoration: none;
+            border: 2px solid white;
+            margin-right: 10px;
+            font-size: 3rem;
+            margin-top: 10px;
+        }
+
+        #list a:hover {
+            background-color: #333333;
+            scale: 0.9;
+        }
+
+        .main {
+            border: 2px solid whitesmoke;
+            height: 90vh;
+            width: 100vw;
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #070606;
+        }
+
+        .form {
+            border: 2px solid whitesmoke;
+            padding: 32px;
+            border-radius: 16px;
+            font-size: 2rem;
+            color: whitesmoke;
+            font-family: 'Courier New', Courier, monospace;
+            
+        }
+
+        input {
+            padding: 8px;
+            font-size: 2rem;
+            color: whitesmoke;
+            background-color: transparent;
+            border: 2px solid whitesmoke;
+        }
+
+        button{
+            background-color: transparent;
+            border: 2px dotted whitesmoke;
+            color: whitesmoke;
+            font-size: 2.6rem;
+            margin: 16px 24px;
+            padding: 16px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        button:hover{
+            scale: 0.9;
+            cursor: pointer;
+        }
+        h2{
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+            padding: 30px;
+            font-size: 3rem;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li id="list"><a href='/index.html'>Home</a></li>
+            <li id="list"><a href='/about.html'>About</a></li>
+            <li style="float: left; font-family: cursive; font-size: 4rem; padding: 10px;"><a>Design</a></li>
+        </ul>
+    </nav>
+    <div class="main">
+        <form action="#">
+            <div class="form">
+                <h2>Contact Us</h2>
+                <label for="NAME*"> YOUR NAME</label>
+                <br>
+                <input id="NAME" type="name" placeholder="First name">
+                <input id="NAME" type="name" autofocus placeholder="Last name" aria-required="true">
+                <br><br>
+                <label for="email">EMAIL ADDRESS</label>
+                <br>
+                <input id="email" type="email" autofocus placeholder="Eg. krishna@email">
+                <br><br>
+                <label for="phone_no"> PHONE NUMBER</label>
+                <br>
+                <input id="phone_no" type="number" autofocus placeholder="Eg. +91 00000 00000">
+                <br><br>
+                <label for="msg"> Share Your Suggestions</label>
+                <br>
+                <textarea name="text" placeholder="Please enter your comments..." id="" cols="30" rows="10" style="background-color: transparent;"></textarea>
+                <br>
+                <input type="checkbox" id="checkbox">
+                <span>Remember me</span> <br>
+                <button  type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
