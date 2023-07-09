@@ -5,25 +5,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="form.css">
-    <title>Forms</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Contact</title>
     <style>
         * {
             margin: 0;
             padding: 0;
-            font-family: 'Times New Roman', Times, serif;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #070606;
+            
         }
 
         nav {
-            font-size: 1.2rem;
+            font-size: 1.2vw;
         }
 
         ul {
             list-style-type: none;
             overflow: hidden;
             background-color: #111111;
-            padding-left: 20px;
-            padding-right: 20px;
+            margin-right: 30px;
+            margin-left: 24px;
         }
 
         li {
@@ -39,7 +46,7 @@
             text-decoration: none;
             border: 2px solid white;
             margin-right: 10px;
-            font-size: 3rem;
+            font-size: 1.2vw;
             margin-top: 10px;
         }
 
@@ -47,54 +54,39 @@
             background-color: #333333;
             scale: 0.9;
         }
-
-        .main {
-            border: 2px solid whitesmoke;
-            height: 90vh;
-            width: 100vw;
-            
+        .main{
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-            background-color: #070606;
-        }
-
-        .form {
             border: 2px solid whitesmoke;
-            padding: 32px;
-            border-radius: 16px;
-            font-size: 2rem;
-            color: whitesmoke;
-            font-family: 'Courier New', Courier, monospace;
+            gap: 8vh;
             
         }
-
-        input {
-            padding: 8px;
-            font-size: 2rem;
+        #mainform {
             color: whitesmoke;
+            width: 40vw;
+            padding: 40px;
+            font-size: 1.5vw;
+            border: 2px solid whitesmoke;
+            border-radius: 16px;
+            margin-top: 10vh;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .share{
             background-color: transparent;
             border: 2px solid whitesmoke;
-        }
-
-        button{
-            background-color: transparent;
-            border: 2px dotted whitesmoke;
             color: whitesmoke;
-            font-size: 2.6rem;
-            margin: 16px 24px;
-            padding: 16px;
+            width: 80%;
+            padding: 24px;
+            font-size: 1.5vw;
+            border-radius: 16px;
+            margin: 10vh;
             font-family: 'Courier New', Courier, monospace;
         }
-        button:hover{
-            scale: 0.9;
-            cursor: pointer;
-        }
-        h2{
-            text-align: center;
-            font-family: 'Courier New', Courier, monospace;
-            padding: 30px;
-            font-size: 3rem;
+        #shareform{
+            font-size: 1.5vw;
+            margin-top: 5vh;
         }
     </style>
 </head>
@@ -104,36 +96,89 @@
         <ul>
             <li id="list"><a href='/index.html'>Home</a></li>
             <li id="list"><a href='/about.html'>About</a></li>
-            <li style="float: left; font-family: cursive; font-size: 4rem; padding: 10px;"><a>Design</a></li>
+            <li style="float: left; font-family: cursive; font-size: 2.5vw; padding: 10px;"><a>Design</a></li>
         </ul>
     </nav>
     <div class="main">
-        <form action="#">
-            <div class="form">
-                <h2>Contact Us</h2>
-                <label for="NAME*"> YOUR NAME</label>
-                <br>
-                <input id="NAME" type="name" placeholder="First name">
-                <input id="NAME" type="name" autofocus placeholder="Last name" aria-required="true">
-                <br><br>
-                <label for="email">EMAIL ADDRESS</label>
-                <br>
-                <input id="email" type="email" autofocus placeholder="Eg. krishna@email">
-                <br><br>
-                <label for="phone_no"> PHONE NUMBER</label>
-                <br>
-                <input id="phone_no" type="number" autofocus placeholder="Eg. +91 00000 00000">
-                <br><br>
-                <label for="msg"> Share Your Suggestions</label>
-                <br>
-                <textarea name="text" placeholder="Please enter your comments..." id="" cols="30" rows="10" style="background-color: transparent;"></textarea>
-                <br>
-                <input type="checkbox" id="checkbox">
-                <span>Remember me</span> <br>
-                <button  type="submit">Submit</button>
+    <form id="mainform">
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="name">Name</label>
+                <input style="background-color: transparent; color: whitesmoke; padding: 24px;" type="text" class="form-control" id="inputname" placeholder="First name">
             </div>
-        </form>
+            <div class="form-group col-md-6">
+                <label style="color: #070606;" for="inputPassword4">abc</label>
+                <input style="background-color: transparent; color: whitesmoke; padding: 24px;" type="text" class="form-control" id="lastname" placeholder="last name">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="inputEmail4">Email</label>
+                <input style="background-color: transparent; color: whitesmoke; padding: 24px;" type="email" class="form-control" id="inputEmail4" placeholder="abc@gmail.com">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="inputPassword4">Password</label>
+                <input style="background-color: transparent; color: whitesmoke; padding: 24px;" type="password" class="form-control" id="inputPassword4">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputAddress">Address</label>
+            <input style="background-color: transparent; color: whitesmoke; padding: 24px;" type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="inputCity">City</label>
+                <input style="background-color: transparent; color: whitesmoke; padding: 24px;" type="text" class="form-control" id="inputCity">
+            </div>
+            <div class="form-group col-md-4">
+                <label for="inputState">State</label>
+                <select style="background-color: transparent; color: whitesmoke; padding: 24px;" id="inputState" class="form-control">
+                    <option selected>Choose</option>
+                    <option style="color: #070606;">Delhi</option>
+                    <option style="color: #070606;">Mumbai</option>
+                    <option style="color: #070606;">Uttar Pradesh</option>
+                    <option style="color: #070606;">Uttarakhand</option>
+                    <option style="color: #070606;">Tamil Nadu</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1">Suggestions</label>
+            <textarea style="background-color: transparent; height: 5vh;" class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Share your Suggestions..."></textarea>
+          </div>
+        <div class="form-group">
+            <div class="form-check" >
+                <input style="background-color: #070606; padding: 32px; height: 2.4vh; width: 1vw; " class="form-check-input" type="checkbox" id="gridCheck">
+                <label style="margin-left: 50px;" class="form-check-label" for="gridCheck">
+                    Remember Me
+                </label>
+            </div>
+        </div>
+        <button style="background-color: transparent; color: whitesmoke; border: 2px dotted whitesmoke; font-size: 2rem; padding: 12px;" type="submit" class="btn btn-primary">Sign in</button>
+    </form>
+    <div class="share">
+        <h1 style="text-align: center;font-size: 1.7vw;">Your can also join Us</h1>
+        <h3 style="text-align: center; font-size: 1.5vw;">Share your ideas</h3>
+        <form id="shareform">
+            <div class="form-group">
+              <label for="exampleFormControlFile1">Drop your Work👇</label> <br> <br>
+              <input type="file" class="form-control-file" id="exampleFormControlFile1">
+            </div>
+          </form>
     </div>
+    </div>
+
+    
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
